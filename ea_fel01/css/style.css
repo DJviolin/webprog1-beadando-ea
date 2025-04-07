@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+:root {
+	--body-bg: #fff;
+	--body-color: #212529;
+	--body-font-size: 1rem;
+	--body-font-weight: 400;
+	--body-line-height: 1.5;
+	--body-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--chartjs-width: 80;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		scroll-behavior: smooth;
+	}
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+body {
+	margin: 0;
+	font-family: var(--body-font-family);
+	font-size: var(--body-font-size);
+	font-weight: var(--body-font-weight);
+	line-height: var(--body-line-height);
+	color: var(--body-color);
+	background-color: var(--body-bg);
+}
+
+/* Közös stílusok */
+
+.divider {
+	display: block;
+	height: 50px;
+	width: 100%;
+}
+
+header, footer {
+	padding: 0.5em;
+	color: white;
+	background-color: gray;
+}
+h1.header {
+	padding: 0;
+	margin: 0;
+}
+aside {
+	float: left;
+	width: 160px;
+	margin: 0;
+	padding: 1em;
+}
+section, div#content {
+	margin-left: 190px;
+	border-left: 1px solid gray;
+	padding: 1em;
+}
+ul {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+a {
+	float: left;
+	width: 6em;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(53, 128, 0);
+	padding: 0.2em 0.6em;
+	border-right: 1px solid white;
+}
+a.active {
+	border-bottom: 5px solid blue;
+}
+a:hover { background-color: #ff3300; }
+li {
+	display: inline;
+}
+
+/* ************************************************************************** */
+/* Táblázat, AJAX menü */
+/* ************************************************************************** */
+
+#tablazat .flowers-form,
+#ajax #ajaxForm {
+	border-style: solid;
+	padding: 10px;
+	/* margin: auto; */
+	width: 50%;
+}
+.flowers-table {
+	border-style: solid;
+	padding: 20px;
+	/* margin: auto; */
+	width: 70%;
+}
+body > table {
+	width: 80%;
+}
+table {
+	border-collapse: collapse;
+}
+table.list {
+	width: 100%;
+}
+td,
+th {
+	border: 1px solid #ddd;
+	text-align: left;
+	padding: 8px;
+	cursor: pointer;
+}
+tr:nth-child(even),
+table.list thead>tr {
+	background-color: #ddd;
+}
+input[type=text],
+input[type=number],
+input[type=date] {
+	width: 100%;
+	padding: 8px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+button[type=submit],
+input[type=submit] {
+	width: 30%;
+	background-color: black;
+	color: white;
+	padding: 10px 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+form div.form-action-buttons {
+	text-align: right;
+}
+label.validation-error {
+	color: red;
+	margin-left: 5px;
+}
+.hide {
+	display: none;
+}
+#searchInput {
+	width: 100%;
+	padding: 8px 12px;
+	margin-bottom: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+.filters-row {
+	display: table;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.filter-item {
+	display: table-cell;
+	padding: 5px;
+}
+.filter-item input {
+	width: 100%;
+	padding: 5px;
+	font-size: 14px;
+}
+
+/* ************************************************************************** */
+/* HTML5 menü */
+/* ************************************************************************** */
+
+#html5 #svg-example-pic {
+	max-width: 200px;
+	width: 100%;
+	height: auto;
+}
+
+/* ************************************************************************** */
+/* Chart.js menü */
+/* ************************************************************************** */
+
+#chartjs .chart-container {
+	position: relative;
+	width: calc(var(--chartjs-width) * 1vw);
+  	height: calc((var(--chartjs-width) * 1vh) / 2);
+}
+
+/* ************************************************************************** */
+/* Ajax menü */
+/* ************************************************************************** */
+
+
+
+/* ************************************************************************** */
+/* OOJS menü */
+/* ************************************************************************** */
+
+#oojs .card-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	max-width: 1000px;
+}
+
+#oojs .flower-card {
+	flex: 1 1 250px;
+	background-color: #f8f8f8;
+	border-radius: 8px;
+	padding: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeIn 0.5s ease forwards;
+}
+
+#oojs .flower-card h3 {
+	margin-top: 0;
+	color: #333;
+}
+
+#oojs .flower-card p {
+	margin: 0.5rem 0;
+	color: #555;
+}
+
+#oojs .flower-card p .speciality {
+	color: #ff3300;
+}
+
+#oojs .special-note {
+	color: #d63384;
+	font-weight: bold;
+	margin-top: 0.5rem;
+}

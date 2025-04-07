@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Index</title>
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body id="chartjs">
+	<header>
+		<h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
+	</header>
+	<nav></nav>
+	<aside>
+		<h2></h2>
+	</aside>
+	<div id="content">
+		<h2>Törökszegfű (Dianthus barbatus) tőszám nyilvántartó Chart.js-ben</h2>
+		<div class="flowers-table" style="margin: unset; margin-bottom: 25px;">
+			<table class="list" id="flowerList">
+				<thead>
+					<tr>
+						<th>Fajta neve</th>
+						<th>Szín</th>
+						<th>Fagyáspont</th>
+						<th>Mennyiség</th>
+						<th>Ültetés dátuma</th>
+					</tr>
+				</thead>
+				<tbody><!-- Dinamikusan létrehozott táblázat --></tbody>
+			</table>
+		</div>
+		<div class="chart-container">
+			<canvas id="plantingChart"></canvas>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"
+        onerror="this.onerror=null; this.src='./js/packages/chart.js';">
+	</script>
+	<script src="./js/common.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

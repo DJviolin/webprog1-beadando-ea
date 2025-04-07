@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Index</title>
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body id="html5">
+	<header>
+		<h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
+	</header>
+	<nav></nav>
+	<aside>
+		<h2></h2>
+	</aside>
+	<div id="content">
+		<h2>Dianthus barbatus plantálása HTML5-be</h2>
+		<h3>Web Storage</h3>
+		<div id="webStorageExample">
+			<button id="saveFlower">Törökszegfű mentése</button>
+			<button id="loadFlower">Törökszegfű betöltése</button>
+			<p id="storageOutput"></p>
+		</div>
+		<h3>Web Workers</h3>
+		<div id="webWorkerExample">
+			<button id="startWorker">Web Worker indítása</button>
+			<p id="workerOutput"></p>
+		</div>
+		<h3>Server-Sent Events</h3>
+		<div id="sseExample">
+			<p>SSE üzenetek:</p>
+			<div id="sseMessages"></div>
+		</div>
+		<h3>Geolocation API</h3>
+		<div id="geolocationExample">
+			<button id="getLocationBtn">Helymeghatározás indítása</button>
+			<p id="geoOutput"></p>
+		</div>
+		<h3>Drag and drop API</h3>
+		<div id="dragDropExample">
+			<p>Húzd a "Törökszegfű" elemet a zöld dobozba:</p>
+			<div id="dragFlower" draggable="true" style="width:100px; height:50px; background-color: #f08080; text-align:center; margin-bottom:10px;">Törökszegfű</div>
+			<div id="dropZone" style="width:120px; height:70px; background-color: #90ee90; text-align:center;">Dobd ide</div>
+		</div>
+		<h3>Canvas</h3>
+		<div id="canvasExample">
+			<canvas id="flowerCanvas" width="300" height="200" style="border:1px solid #000;"></canvas>
+		</div>
+		<h3>SVG</h3>
+		<div id="svgExample">
+			<svg width="300" height="250" xmlns="http://www.w3.org/2000/svg">
+				<!-- Virág középpontja -->
+				<circle cx="150" cy="100" r="10" fill="yellow" />
+				<!-- Szirmok -->
+				<circle cx="180" cy="100" r="15" fill="pink" />
+				<circle cx="171.21" cy="121.21" r="15" fill="pink" />
+				<circle cx="150" cy="130" r="15" fill="pink" />
+				<circle cx="128.79" cy="121.21" r="15" fill="pink" />
+				<circle cx="120" cy="100" r="15" fill="pink" />
+				<circle cx="128.79" cy="78.79" r="15" fill="pink" />
+				<circle cx="150" cy="70" r="15" fill="pink" />
+				<circle cx="171.21" cy="78.79" r="15" fill="pink" />
+				<!-- Felirat: Törökszegfű -->
+				<text x="110" y="190" font-size="16" font-family="sans-serif" fill="black">
+					Törökszegfű
+				</text>
+			</svg>
+		</div>
+		<h3>SVG (képként beszúrva)</h3>
+		<div id="svg-example-pic">
+			<img src="./images/sweet-william-freepik.svg" alt="Törökszegfű">
+		</div>
+	</div>
+	<footer></footer>
+	<script src="./js/common.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

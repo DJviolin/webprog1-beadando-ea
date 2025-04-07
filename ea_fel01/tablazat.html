@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Index</title>
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body id="tablazat">
+	<header>
+		<h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
+	</header>
+	<nav></nav>
+	<aside>
+		<h2></h2>
+	</aside>
+	<div id="content">
+		<h2>Törökszegfű (Dianthus barbatus) tőszám nyilvántartó</h2>
+		<div class="flowers-form">
+			<form id="flowerForm">
+				<div>
+					<label>Fajta neve*</label>
+					<label class="validation-error hide" id="nameValidationError">Kötelező mező (3-30 karakter).</label>
+					<input type="text" name="name" id="name">
+				</div>
+				<div>
+					<label>Szín*</label>
+					<label class="validation-error hide" id="colorValidationError">Kötelező mező.</label>
+					<input type="text" name="color" id="color">
+				</div>
+				<div>
+					<label>Fagyáspont*</label>
+					<label class="validation-error hide" id="freezeTempValidationError">Negatív szám kötelező.</label>
+					<input type="number" step="0.01" name="freezeTemp" id="freezeTemp" max="0">
+				</div>
+				<div>
+					<label>Mennyiség*</label>
+					<label class="validation-error hide" id="quantityValidationError">Pozitív szám kötelező.</label>
+					<input type="number" name="quantity" id="quantity" min="1">
+				</div>
+				<div>
+					<label>Ültetés dátuma*</label>
+					<label class="validation-error hide" id="dateValidationError">Kötelező mező.</label>
+					<input type="date" name="plantDate" id="plantDate">
+				</div>
+				<div class="form-action-buttons">
+					<input type="submit" value="Mentés">
+				</div>
+			</form>
+		</div>
+		<br />
+		<div class="flowers-table">
+			<div class="filters-row">
+				<div class="filter-item">
+					<input type="text" id="nameFilter" placeholder="Fajta neve keresése...">
+				</div>
+				<div class="filter-item">
+					<input type="text" id="colorFilter" placeholder="Szín keresése...">
+				</div>
+				<div class="filter-item">
+					<input type="number" step="0.01" id="freezeTempFilter" placeholder="fagyáspont keresése...">
+				</div>
+				<div class="filter-item">
+					<input type="number" id="quantityFilter" placeholder="Mennyiség keresése...">
+				</div>
+				<div class="filter-item">
+					<input type="text" id="plantDateFilter" placeholder="Ültetés dátuma keresése...">
+				</div>
+			</div>
+			<table class="list" id="flowerList">
+				<thead>
+					<tr>
+						<th>Fajta neve</th>
+						<th>Szín</th>
+						<th>Fagyáspont</th>
+						<th>Mennyiség</th>
+						<th>Ültetés dátuma</th>
+						<th>Műveletek</th>
+					</tr>
+				</thead>
+				<tbody><!-- Dinamikusan létrehozott táblázat --></tbody>
+			</table>
+		</div>
+	</div>
+	<footer></footer>
+	<script src="./js/common.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

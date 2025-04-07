@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Index</title>
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body id="ajax">
+	<header>
+		<h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
+	</header>
+	<nav></nav>
+	<aside>
+		<h2></h2>
+	</aside>
+	<div id="content">
+		<h2>Ajax menü</h2>
+		<form id="ajaxForm">
+			<div>
+				<label for="operation">Művelet:</label>
+				<select name="operation" id="operation" required>
+					<option value="create">Létrehozás</option>
+					<option value="update">Módosítás</option>
+					<option value="delete">Törlés</option>
+				</select>
+				<br><br>
+			</div>
+			<div>
+				<label for="id">ID (csak Módosítás/Törlés esetén):</label>
+				<input type="text" name="id" id="id">
+				<button type="button" id="getDataForId">Adatok lekérése</button>
+				<br><br>
+			</div>
+			<div>
+				<label for="name">Név:</label>
+				<input type="text" name="name" id="name">
+			</div>
+			<div>
+				<label for="height">Magasság:</label>
+				<input type="text" name="height" id="height">
+			</div>
+			<div>
+				<label for="weight">Testsúly:</label>
+				<input type="text" name="weight" id="weight">
+			</div>
+			<div class="form-action-buttons">
+				<button type="submit">Küldés</button>
+			</div>
+		</form>
+		<div id="ajaxContent"><!-- Ide kerül az AJAX kérés eredménye! --></div>
+	</div>
+	<footer></footer>
+	<script src="./js/common.js"></script>
+	<script src="./js/ajax.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "webprog1_beadando_ea",
+  "version": "1.0.0",
+  "description": "",
+  "author": "István Lantos <lantosistvan89@gmail.com>",
+  "node": "<=22.0.0",
+  "type": "module",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DJviolin/webprog1-beadando-ea.git"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@eslint/js": "9.23.0",
+    "eslint": "9.23.0",
+    "eslint-plugin-react": "7.37.4",
+    "globals": "16.0.0"
+  }
+}
