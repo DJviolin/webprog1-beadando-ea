@@ -7,7 +7,7 @@ A kész projekt elérhető a [http://lanti.nhely.hu](http://lanti.nhely.hu) cím
 * [1. feladat](http://lanti.nhely.hu/ea_fel01/index.html)
 * [2. feladat](http://lanti.nhely.hu/react/react.html)
 
-## Teszt URL-ek (Webprogramozas-1-Előadás-Beadando-feladat.docx)
+## Teszt URL-ek (Webprogramozas-1-Előadás-Beadando-feladat.docxf fájl végén)
 
 * [proba.txt](http://lanti.nhely.hu/proba.txt)
 * [testDB.php](http://lanti.nhely.hu/testDB.php)
@@ -50,7 +50,7 @@ HTTP szerver futtatása lokális teszteléshez:
 $ npm start
 ```
 
-NPM csomagok verzió vizsgálata:
+Elavult NPM csomagok verzió vizsgálata:
 
 ```sh
 $ npm outdated
