@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import CardGrid from './components/CardGrid';
 
 const initialCards = ['🌸', '🌼', '🌺', '🌻', '🌸', '🌼', '🌺', '🌻'].sort(() => 0.5 - Math.random());
 
@@ -26,17 +27,14 @@ function App() {
   return (
     <div className="app-container">
       <h1>Törökszegfű memóriajáték</h1>
-      <div className="grid">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className={`card ${flipped.includes(index) || matched.includes(index) ? 'flipped' : ''}`}
-            onClick={() => handleFlip(index)}
-          >
-            {flipped.includes(index) || matched.includes(index) ? card : '❓'}
-          </div>
-        ))}
-      </div>
+
+      <CardGrid
+        cards={cards}
+        flipped={flipped}
+        matched={matched}
+        onCardClick={handleFlip}
+      />
+
       {matched.length === cards.length && <h2>Gratulálok, megtaláltál minden párt!</h2>}
     </div>
   );

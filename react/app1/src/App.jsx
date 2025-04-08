@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import FlowerSelector from './components/FlowerSelector.jsx';
 
 const flowers = [
   { type: 'Fehér', price: 500 },
@@ -14,17 +15,24 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Törökszegfű Rendelés</h1>
-      <label>
-        Válassz típust:
-        <select value={selected.type} onChange={e => setSelected(flowers.find(f => f.type === e.target.value))}>
-          {flowers.map(f => <option key={f.type} value={f.type}>{f.type}</option>)}
-        </select>
-      </label>
+      <h1>Törökszegfű rendelés</h1>
+
+      <FlowerSelector
+        options={flowers}
+        selected={selected}
+        onChange={setSelected}
+      />
+
       <label>
         Darabszám:
-        <input type="number" min="1" value={quantity} onChange={e => setQuantity(Number(e.target.value))} />
+        <input
+          type="number"
+          min="1"
+          value={quantity}
+          onChange={e => setQuantity(Number(e.target.value))}
+        />
       </label>
+
       <p>Egységár: {selected.price} Ft</p>
       <h2>Végösszeg: {total} Ft</h2>
     </div>
