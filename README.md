@@ -2,12 +2,23 @@
 
 A kész projekt elérhető a [http://lanti.nhely.hu](http://lanti.nhely.hu) címen feladat szerint almappákba szervezve.
 
-## Teszt URL-ek
+## Kész feladatok webszerveren
+
+* [1. feladat](http://lanti.nhely.hu/ea_fel01/index.html)
+* [2. feladat](http://lanti.nhely.hu/react/react.html)
+
+## Teszt URL-ek (Webprogramozas-1-Előadás-Beadando-feladat.docx)
 
 * [proba.txt](http://lanti.nhely.hu/proba.txt)
 * [testDB.php](http://lanti.nhely.hu/testDB.php)
 
 ## Használat
+
+### Lokális PHP szerver használata XAMPP nélkül NPM-ben
+
+Le kell tölteni a PHP környzetetet és kicsomagolni egy újonnan létrehozott `./php` mappába a gyökérkönyvtárban [erről](https://windows.php.net/downloads/releases/php-8.4.5-Win32-vs17-x64.zip) a címről.
+
+### Futtatás localhost-on
 
 ```sh
 $ npm install
@@ -35,6 +46,12 @@ HTTP szerver futtatása lokális teszteléshez:
 
 ```sh
 $ npm start
+```
+
+NPM csomagok verzió vizsgálata:
+
+```sh
+$ npm outdated
 ```
 
 ## Eslint linting használata VSCode-ban Javascript-hez

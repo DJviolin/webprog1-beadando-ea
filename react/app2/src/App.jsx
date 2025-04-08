@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Törökszegfű Memóriajáték</h1>
+      <h1>Törökszegfű memóriajáték</h1>
       <div className="grid">
         {cards.map((card, index) => (
           <div

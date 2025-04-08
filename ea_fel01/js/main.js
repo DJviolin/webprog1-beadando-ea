@@ -308,14 +308,23 @@ if (document.body.id === 'html5') {
 
   const sseMessages = document.getElementById('sseMessages');
   if (window.EventSource) {
-    const source = new EventSource('/sse.php');
+    const source = new EventSource('/ea_fel01/sse.php');
+    let messageCount = 0;
     source.onmessage = e => {
-      const msgDiv = document.createElement('div');
-      msgDiv.textContent = e.data;
-      sseMessages.appendChild(msgDiv);
+      if (messageCount < 5) {
+        const msgDiv = document.createElement('div');
+        msgDiv.textContent = e.data;
+        sseMessages.appendChild(msgDiv);
+        messageCount++;
+        if (messageCount === 5) {
+          source.close();
+          msgDiv.innerHTML += '<br><span style="font-weight: bold; color: #f00">5 üzenet átvéve!</span>';
+        }
+      }
     };
     source.onerror = () => {
       sseMessages.textContent = "SSE hiba vagy nincs kapcsolat.";
+      source.close();
     };
   } else {
     sseMessages.textContent = "EventSource nem támogatott.";

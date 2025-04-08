@@ -7,12 +7,9 @@ header('Cache-Control: no-cache');
 set_time_limit(0);
 
 $counter = 0;
-while (true) {
+while ($counter < 10) {
 	$counter++;
 	$data = "Törökszegfű üzenet #{$counter}";
-
-	// Az üzenet formázása az SSE szabvány szerint:
-	// "data: [üzenet]\n\n"
 	echo "data: {$data}\n\n";
 
 	ob_flush();
