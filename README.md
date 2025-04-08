@@ -1,6 +1,6 @@
 # webprog1_beadando_ea
 
-A kész projekt elérhető a [http://lanti.nhely.hu](http://lanti.nhely.hu) címen feladat szerint almappákba szervezve.
+A kész projekt elérhető a [http://lanti.nhely.hu](http://lanti.nhely.hu) domain alatt feladat szerint almappákba szervezve.
 
 ## Kész feladatok webszerveren
 
