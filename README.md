@@ -7,11 +7,7 @@ A kész projekt elérhető a [http://lanti.nhely.hu](http://lanti.nhely.hu) cím
 * [proba.txt](http://lanti.nhely.hu/proba.txt)
 * [testDB.php](http://lanti.nhely.hu/testDB.php)
 
-## Eslint linting használata VSCode-ban Javascript-hez
-
-A linting az `eslint` modult használja, és a konfiguráció a `eslint.config.js` fájlban van megadva monorepóként a React al-projektekre is érvényesítve.
-
-Telepítés:
+## Használat
 
 ```sh
 $ npm install
@@ -40,3 +36,7 @@ HTTP szerver futtatása lokális teszteléshez:
 ```sh
 $ npm start
 ```
+
+## Eslint linting használata VSCode-ban Javascript-hez
+
+A linting az `eslint` modult használja, és a konfiguráció a `eslint.config.js` fájlban van megadva monorepóként a React al-projektekre is érvényesítve.
