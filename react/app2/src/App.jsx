@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import CardGrid from './components/CardGrid';
+import CardGrid from './components/CardGrid.jsx';
 
 const initialCards = ['🌸', '🌼', '🌺', '🌻', '🌸', '🌼', '🌺', '🌻'].sort(() => 0.5 - Math.random());
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
   const [cards, setCards] = useState(initialCards);
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);
