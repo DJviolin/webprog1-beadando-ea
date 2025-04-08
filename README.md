@@ -44,7 +44,7 @@ React build futtatása:
 $ npm run build
 ```
 
-HTTP szerver futtatása lokális teszteléshez:
+HTTP szerver futtatása lokális teszteléshez (build után):
 
 ```sh
 $ npm start
