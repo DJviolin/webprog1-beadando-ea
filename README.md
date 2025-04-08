@@ -2,8 +2,6 @@
 
 A kész projekt elérhető a [http://lanti.nhely.hu](http://lanti.nhely.hu) címen feladat szerint almappákba szervezve.
 
-Az `1. feladat`-hoz egyáltalán nem, a `2. feladat` elkészült build-jéhez a `./react/dist` mappában sincs szükség szerverre a futáshoz.
-
 ## Kész feladatok webszerveren
 
 * [1. feladat](http://lanti.nhely.hu/ea_fel01/index.html)
@@ -16,7 +14,7 @@ Az `1. feladat`-hoz egyáltalán nem, a `2. feladat` elkészült build-jéhez a 
 
 ## Használat
 
-### Lokális PHP szerver használata XAMPP nélkül NPM-ben
+### Lokális PHP szerver használata XAMPP nélkül NPM-ben fejlesztéshez
 
 A PHP automatikusan letöltésre kerül a `./.php` mappába a `main.js` lokális webszerver indító script által (csak Windows-os verziót kezel).
 
