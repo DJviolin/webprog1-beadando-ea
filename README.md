@@ -2,6 +2,8 @@
 
 A kész projekt elérhető a [http://lanti.nhely.hu](http://lanti.nhely.hu) címen feladat szerint almappákba szervezve.
 
+Az `1. feladat`-hoz egyáltalán nem, a `2. feladat` elkészült build-jéhez a `./react/dist` mappában sincs szükség szerverre a futáshoz.
+
 ## Kész feladatok webszerveren
 
 * [1. feladat](http://lanti.nhely.hu/ea_fel01/index.html)
