@@ -3,6 +3,8 @@ import { Buffer } from 'node:buffer';
 import fs from 'fs';
 import unzipper from 'unzipper';
 import { resolve } from 'path';
+import { pipeline } from 'stream/promises';
+import got from 'got';
 
 const PHP_EXEC = resolve(import.meta.dirname, './.php/php.exe');
 const PHP_URL = 'https://windows.php.net/downloads/releases/php-8.4.5-Win32-vs17-x64.zip';
@@ -27,24 +29,20 @@ function ensurePHPDir() {
   }
 }
 
-async function downloadPHP() {
-  console.log('PHP nem található vagy hibás verzió. Letöltés indul...');
-
-  const response = await fetch(PHP_URL);
-  if (!response.ok) {
-    throw new Error(`Sikertelen letöltés: HTTP ${response.status} ${response.statusText}`);
-  }
-
-  const arrayBuffer = await response.arrayBuffer();
-  const data = Buffer.from(arrayBuffer);
-  fs.writeFileSync(PHP_ZIP, data);
-
-  const expectedLength = Number(response.headers.get('content-length'));
-  const actualLength = data.length;
-
-  if (expectedLength && actualLength < expectedLength * 0.95) {
-    throw new Error(`Letöltés túl rövid: ${actualLength} / ${expectedLength} byte`);
-  }
+async function downloadPHPWithProgress() {
+  console.log('Letöltés elindult...');
+  const downloadStream = got.stream(PHP_URL);
+  const fileWriterStream = fs.createWriteStream(PHP_ZIP);
+  let lastPercent = 0;
+  downloadStream.on('downloadProgress', ({ transferred, total, percent }) => {
+    const percentage = Math.floor(percent * 100);
+    if (percentage !== lastPercent) {
+      lastPercent = percentage;
+      console.clear();
+      console.log(`Letöltés: ${percentage}% (${transferred} / ${total || '??'} byte)`);
+    }
+  });
+  await pipeline(downloadStream, fileWriterStream);
 }
 
 function unzipPHP() {
@@ -61,7 +59,7 @@ function startPHPServer() {
 async function main() {
   ensurePHPDir();
   if (!checkPHPVersion()) {
-    await downloadPHP();
+    await downloadPHPWithProgress();
     await unzipPHP();
     fs.unlinkSync(PHP_ZIP);
   }
