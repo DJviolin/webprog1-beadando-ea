@@ -7,7 +7,7 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default defineConfig([
   {
-    ignores: ['react/dist', 'ea_fel01/js/packages/*'],
+    ignores: ['react/dist', 'ea_fel01/js/packages'],
   },
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
