@@ -20,6 +20,8 @@ Le kell tölteni a PHP környzetetet és kicsomagolni egy újonnan létrehozott 
 
 ### Futtatás localhost-on
 
+A projekt monorepó struktúrát használ, vagyis minden `npm` parancsot a gyökérkönyvtárban kell futtatni.
+
 ```sh
 $ npm install
 ```
@@ -56,4 +58,4 @@ $ npm outdated
 
 ## Eslint linting használata VSCode-ban Javascript-hez
 
-A linting az `eslint` modult használja, és a konfiguráció a `eslint.config.js` fájlban van megadva monorepóként a React al-projektekre is érvényesítve.
+A linting az `eslint` modult használja, és a konfiguráció a `eslint.config.js` fájlban van megadva monorepóként a React al-projektekre is érvényesítve (tehát azokban már nincs az `eslint` telepítve).
