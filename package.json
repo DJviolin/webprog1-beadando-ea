@@ -8,18 +8,18 @@
   "type": "module",
   "main": "main.js",
   "workspaces": [
-    "react/*"
+    "react/src/*"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DJviolin/webprog1-beadando-ea.git"
   },
   "scripts": {
-    "build:app1": "cd react/app1 && npm run build",
-    "build:app2": "cd react/app2 && npm run build",
+    "build:app1": "cd react/src/app1 && npm run build",
+    "build:app2": "cd react/src/app2 && npm run build",
     "build": "npm run build:app1 && npm run build:app2",
-    "dev:app1": "cd react/app1 && npm run dev",
-    "dev:app2": "cd react/app2 && npm run dev",
+    "dev:app1": "cd react/src/app1 && npm run dev",
+    "dev:app2": "cd react/src/app2 && npm run dev",
     "dev": "concurrently -n app1,app2 -c green,blue \"npm run dev:app1\" \"npm run dev:app2\"",
     "lint": "eslint .",
     "start": "node main.js"
