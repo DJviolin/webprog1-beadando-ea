@@ -1,3 +1,17 @@
+body {
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1 {
+	color: #363;
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: #363;
+	margin-top: 30px;
+}
+
 .app-container {
 	max-width: 600px;
 	margin: 30px auto;
@@ -6,11 +20,6 @@
 	border-radius: 12px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	text-align: center;
-}
-
-h1 {
-	color: #363;
-	margin-bottom: 20px;
 }
 
 .grid {
@@ -35,9 +44,4 @@ h1 {
 
 .card.flipped {
 	background: #f2fcf2;
-}
-
-h2 {
-	color: #363;
-	margin-top: 30px;
 }
