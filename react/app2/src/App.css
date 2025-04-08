@@ -2,14 +2,14 @@
 	max-width: 600px;
 	margin: 30px auto;
 	padding: 20px;
-	background: #ffffff;
+	background: #fff;
 	border-radius: 12px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	text-align: center;
 }
 
 h1 {
-	color: #d6718f;
+	color: #363;
 	margin-bottom: 20px;
 }
 
@@ -34,10 +34,10 @@ h1 {
 }
 
 .card.flipped {
-	background: #fef3f5;
+	background: #f2fcf2;
 }
 
 h2 {
-	color: #4caf50;
+	color: #363;
 	margin-top: 30px;
 }
