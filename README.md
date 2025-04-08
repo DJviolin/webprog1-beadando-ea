@@ -18,7 +18,7 @@ Az `1. feladat`-hoz egyáltalán nem, a `2. feladat` elkészült build-jéhez a 
 
 ### Lokális PHP szerver használata XAMPP nélkül NPM-ben
 
-Le kell tölteni a PHP környzetetet és kicsomagolni egy újonnan létrehozott `./php` mappába a gyökérkönyvtárban [erről](https://windows.php.net/downloads/releases/php-8.4.5-Win32-vs17-x64.zip) a címről.
+A PHP automatikusan letöltésre kerül a `./.php` mappába a `main.js` lokális webszerver indító script által (csak Windows-os verziót kezel).
 
 ### Futtatás localhost-on
 
@@ -46,7 +46,7 @@ React build futtatása:
 $ npm run build
 ```
 
-HTTP szerver futtatása lokális teszteléshez (`php` szükséges, valamint az NPM parancsban lévő útvonal miatt csak Windows-on fut):
+HTTP szerver futtatása lokális teszteléshez:
 
 ```sh
 $ npm start
