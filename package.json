@@ -1,20 +1,38 @@
 {
   "name": "webprog1_beadando_ea",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "author": "István Lantos <lantosistvan89@gmail.com>",
   "node": "<=22.0.0",
   "type": "module",
   "main": "index.js",
+  "workspaces": [
+    "react/app1",
+    "react/app2"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DJviolin/webprog1-beadando-ea.git"
   },
-  "scripts": {},
+  "scripts": {
+    "build:app1": "cd react/app1 && npm run build",
+    "build:app2": "cd react/app2 && npm run build",
+    "build": "npm run build:app1 && npm run build:app2",
+    "dev:app1": "cd react/app1 && npm run dev",
+    "dev:app2": "cd react/app2 && npm run dev",
+    "dev": "concurrently -n app1,app2 -c green,blue \"npm run dev:app1\" \"npm run dev:app2\"",
+    "lint": "eslint .",
+    "start": "http-server . -p 8080 -d"
+  },
   "devDependencies": {
-    "@eslint/js": "9.23.0",
-    "eslint": "9.23.0",
-    "eslint-plugin-react": "7.37.4",
-    "globals": "16.0.0"
+    "@eslint/js": "9.24.0",
+    "concurrently": "9.1.2",
+    "eslint": "9.24.0",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.19",
+    "globals": "16.0.0",
+    "http-server": "14.1.1"
   }
 }

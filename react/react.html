@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Törökszegfű Kertészet - React Appok</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<nav>
+		<button onclick="loadApp('app1')">Törökszegfű rendelő</button>
+		<button onclick="loadApp('app2')">Memóriajáték</button>
+	</nav>
+	<iframe id="app-frame" src="./dist/app1/index.html"></iframe>
+	<script>
+		function loadApp(app) {
+			document.getElementById('app-frame').src = './dist/' + app + '/index.html';
+		}
+	</script>
+</body>
+</html>
