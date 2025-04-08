@@ -3,8 +3,7 @@ header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 // header('Access-Control-Allow-Origin: *');
 
-// Ne álljon le a script, amíg a kapcsolat él
-set_time_limit(0);
+set_time_limit(0); // Ne álljon le a script, amíg a kapcsolat él
 
 $counter = 0;
 while ($counter < 10) {
